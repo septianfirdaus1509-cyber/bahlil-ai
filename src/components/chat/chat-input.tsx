@@ -48,7 +48,7 @@ export function ChatInput({ onSubmit, isLoading }: ChatInputProps) {
         type="submit"
         size="icon"
         className="absolute top-1/2 -translate-y-1/2 right-2 rounded-full"
-        disabled={isLoading || !queryValue.trim()}
+        disabled={isLoading || !(queryValue || '').trim()}
       >
         <ArrowUp className="h-5 w-5" />
         <span className="sr-only">Send</span>
